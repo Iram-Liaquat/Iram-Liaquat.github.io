@@ -4,283 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iram Liaquat | Mechatronics & Control Engineer</title>
+    <!-- Devicon for professional tech stack icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         :root {
-            --bg-primary: #0f172a; /* Deep modern slate */
-            --bg-secondary: #1e293b;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8; /* Bright sky blue */
-            --accent-glow: rgba(56, 189, 248, 0.15);
-            --border: #334155;
+            --bg-color: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #2563eb; /* Professional academic blue */
+            --accent-light: #eff6ff;
+            --border: #e5e7eb;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--bg-primary);
+            background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* --- Layout & Typography --- */
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 60px 24px;
         }
 
+        /* --- Hero Section --- */
         .hero {
-            text-align: center;
-            margin-bottom: 80px;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            letter-spacing: -2px;
-            background: linear-gradient(135deg, #f8fafc 0%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
         .hero .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-bottom: 24px;
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 16px;
         }
 
         .hero .bio {
-            max-width: 650px;
-            margin: 0 auto;
             font-size: 1.05rem;
             color: var(--text-secondary);
+            margin-bottom: 24px;
             line-height: 1.7;
         }
-                .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 25px var(--accent-glow);
-            margin-bottom: 24px;
-            transition: transform 0.3s ease;
+
+        /* --- Skills Icons --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 16px;
         }
 
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero .hook {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            max-width: 750px;
-            margin: 0 auto 16px auto;
-            line-height: 1.5;
-        }
-        
-        .hero .hook span {
-            color: var(--accent);
-        }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 32px;
+        .skill-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
+            background: var(--accent-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
         }
 
-        .section-title::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 32px;
-            background: var(--accent);
-            border-radius: 4px;
+        .skill-item i {
+            font-size: 1.2rem;
+            color: var(--accent);
         }
 
-        /* --- Experience Timeline (Minimalist) --- */
-        .experience-grid {
+        /* --- Sections General --- */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        /* --- Research Interests --- */
+        .interests-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 80px;
+            gap: 16px;
         }
 
-        .company-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .company-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 30px -10px var(--accent-glow);
-        }
-
-        .company-card .role {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-
-        .company-card .name {
-            font-size: 0.95rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .company-card .date {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        /* --- Bento Grid for Projects/Impact (Flashy) --- */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: 20px;
-            margin-bottom: 80px;
-        }
-
-        .bento-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            transition: all 0.3s ease;
+        .interest-item {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: var(--text-secondary);
         }
 
-        .bento-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .bento-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px -15px var(--accent-glow);
-        }
-
-        .bento-card:hover::before {
-            opacity: 1;
-        }
-
-        .bento-card.large {
-            grid-column: span 2;
-        }
-
-        .bento-card .metric {
-            font-size: 2.5rem;
-            font-weight: 800;
+        .interest-item::before {
+            content: '▹';
             color: var(--accent);
-            margin-bottom: 8px;
-            letter-spacing: -1px;
+            font-size: 1.2rem;
         }
 
-        .bento-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 12px;
+        /* --- Projects --- */
+        .project-card {
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .bento-card p {
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .project-gif {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .project-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            line-height: 1.6;
         }
 
-        .tags {
+        .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: auto;
+            margin-bottom: 16px;
         }
 
         .tag {
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
             font-size: 0.8rem;
-            font-weight: 500;
+            color: var(--text-secondary);
+            font-family: monospace;
         }
 
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 16px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Experience --- */
+        .experience-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .exp-role {
+            font-weight: 600;
             color: var(--text-primary);
+        }
+
+        .exp-company {
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
+        }
+
+        .exp-company:hover {
+            text-decoration: underline;
+        }
+
+        .exp-date {
+            color: var(--text-secondary);
             font-size: 0.9rem;
-            margin-top: 16px;
-            transition: color 0.2s;
+            font-family: monospace;
         }
-        
-        .card-link:hover {
+
+        /* --- Education --- */
+        .edu-degree {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .edu-uni {
             color: var(--accent);
-        }
-
-        /* --- Education & Footer --- */
-        .education {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 60px;
-        }
-
-        .education h3 {
-            font-size: 1.3rem;
+            font-weight: 500;
             margin-bottom: 8px;
         }
 
-        .education .uni {
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .education p {
+        .edu-details {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
+        /* --- Footer --- */
         footer {
-            text-align: center;
-            padding: 40px 0;
+            margin-top: 80px;
+            padding-top: 30px;
             border-top: 1px solid var(--border);
+            text-align: center;
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
@@ -289,13 +277,13 @@
             display: flex;
             justify-content: center;
             gap: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .social-links a {
-            color: var(--text-secondary);
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.2s;
         }
 
@@ -304,10 +292,22 @@
         }
 
         /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .bento-grid { grid-template-columns: 1fr; }
-            .bento-card.large { grid-column: span 1; }
+        @media (max-width: 600px) {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .skills-container {
+                justify-content: center;
+            }
+            .project-header {
+                flex-direction: column;
+            }
+            .experience-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -315,161 +315,156 @@
 
     <div class="container">
         
-        <!-- HERO SECTION (CATCHY & ACADEMIC/PROFESSIONAL) -->
+        <!-- HERO SECTION -->
         <section class="hero">
-            <!-- Make sure you uploaded your photo as 'profile.jpg' -->
+            <!-- 📸 YOUR IMAGE GOES HERE: Name your file 'profile.jpg' and upload it to the root of this repo -->
             <img src="profile.jpg" alt="Iram Liaquat" class="profile-img">
             
-            <h1>Iram Liaquat</h1>
-            
-            <!-- UPDATED SUBTITLE -->
-            <p class="subtitle">Mechatronics & Control Engineer | Embedded QA @ Motive Technologies Inc.</p>
-            
-            <!-- THE CATCHY HOOK -->
-            <p class="hook">
-                Engineering the validation frameworks that ensure reliability across <span style="white-space: nowrap;">10,000+ connected vehicles</span>.
-            </p>
-            
-            <!-- THE NARRATIVE -->
-            <p class="bio">
-                Most engineers focus on building features; I focus on ensuring they don't break in the real world. 
-                With 5 years of experience across automotive telematics and large-scale IoT, I design test automation 
-                and regression pipelines that bridge the gap between physical hardware, firmware, and cloud infrastructure.
-            </p>
-        </section>
+            <div class="hero-content">
+                <h1>Iram Liaquat</h1>
+                <p class="subtitle">Mechatronics & Control Engineer | Embedded QA @ Motive Technologies Inc.</p>
+                <p class="bio">
+                    I am a Mechatronics and Control Engineer specializing in embedded systems, robotics, and control theory. Currently, I work as an Embedded QA Engineer at Motive Technologies Inc., designing validation frameworks for automotive telematics. My focus is on bridging the gap between theoretical control systems and real-world hardware reliability.
+                </p>
 
-        <!-- EXPERIENCE SECTION (Minimalist: Just Companies) -->
-        <section>
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-grid">
-                <div class="company-card">
-                    <div class="role">Embedded QA Engineer</div>
-                    <div class="name">Motive Technologies Inc.</div>
-                    <div class="date">Mar 2024 – Present</div>
-                </div>
-                <div class="company-card">
-                    <div class="role">Embedded QA Engineer</div>
-                    <div class="name">MRS Technologies</div>
-                    <div class="date">Aug 2023 – Feb 2024</div>
-                </div>
-                <div class="company-card">
-                    <div class="role">QA Engineer → Team Lead</div>
-                    <div class="name">SmartEnds Ltd.</div>
-                    <div class="date">Sep 2021 – Jul 2023</div>
-                </div>
-                <div class="company-card">
-                    <div class="role">Customer Service Executive</div>
-                    <div class="name">Huawei Technologies</div>
-                    <div class="date">Feb 2020 – Feb 2021</div>
+                <!-- SOFTWARE SKILLS -->
+                <div class="skills-container">
+                    <div class="skill-item"><i class="devicon-python-plain"></i> Python</div>
+                    <div class="skill-item"><i class="devicon-cplusplus-plain"></i> C++</div>
+                    <div class="skill-item"><i class="devicon-arduino-plain"></i> Arduino</div>
+                    <div class="skill-item"><i class="devicon-opencv-plain"></i> OpenCV</div>
+                    <div class="skill-item"><i class="devicon-linux-plain"></i> Linux</div>
+                    <div class="skill-item"><i class="devicon-git-plain"></i> Git</div>
+                    <div class="skill-item"><i class="devicon-amazonwebservices-original"></i> AWS</div>
+                    <div class="skill-item"><i class="devicon-bash-plain"></i> Shell</div>
+                    <div class="skill-item">⚙️ RoboAnalyzer</div>
+                    <div class="skill-item">🚗 CAN Tools</div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS / IMPACT SECTION (The "Flashy" Work Details) -->
-        <section>
-            <h2 class="section-title">Key Projects & Impact</h2>
-            <div class="bento-grid">
+        <!-- RESEARCH INTERESTS -->
+        <section class="section">
+            <h2 class="section-title">Research & Technical Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item">Embedded Systems & Real-Time Control</div>
+                <div class="interest-item">Automotive Telematics & Connected Vehicles (CAV)</div>
+                <div class="interest-item">Robotics, Mechatronics & Sensor Fusion</div>
+                <div class="interest-item">System Validation & Test Automation</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Project 1: FYP -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">Operation Theatre Assistive Robot (Final Year Thesis)</div>
+                    </div>
+                </div>
+                <!-- 🎥 YOUR GIF GOES HERE: Name your file 'fyp-demo.gif' and upload it to the root of this repo -->
+                <img src="fyp-demo.gif" alt="FYP Robot Demo" class="project-gif">
                 
-                <!-- Large Card: Motive -->
-                <div class="bento-card large">
+                <p class="project-desc">
+                    A 4-Degree-of-Freedom (4-DOF) robotic manipulator designed for surgical tool retrieval. The system integrates voice recognition for command parsing and computer vision (color and glove detection) for precise spatial positioning. I led the hardware-software integration, kinematic modeling, and closed-loop system validation.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">4-DOF Kinematics</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/IramLiaquat/operation-theatre-assistive-robot" target="_blank">View Code →</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Python Automation -->
+            <div class="project-card">
+                <div class="project-header">
                     <div>
-                        <div class="metric">~30%</div>
-                        <h3>Automotive Telematics Automation</h3>
-                        <p>
-                            At <strong>Motive Technologies Inc.</strong>, I engineered test regression and automation pipelines 
-                            for automotive telematics. By developing Python/JSON-based workflows, I significantly reduced manual 
-                            validation efforts for a global fleet of 10,000+ connected vehicles.
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Test Regression</span>
-                        <span class="tag">Telematics</span>
-                        <span class="tag">Python Automation</span>
-                        <span class="tag">CAN / J1939</span>
+                        <div class="project-title">Python Automation & QA Tooling</div>
                     </div>
                 </div>
-
-                <!-- Medium Card: SmartEnds -->
-                <div class="bento-card">
-                    <div>
-                        <div class="metric">8,000+</div>
-                        <h3>IoT Smart City Validation</h3>
-                        <p>
-                            Led a QA team at <strong>SmartEnds Ltd.</strong> for a massive IoT deployment in Edinburgh City. Investigated critical 
-                            field failures, including firmware corruption, and drove automation that cut manual testing by 40%.
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Team Lead</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Root-Cause Analysis</span>
-                    </div>
+                <p class="project-desc">
+                    A collection of open-source Python utilities and technical documentation focusing on automated log parsing and file system navigation for embedded QA workflows. Focuses on building reproducible, clean-code solutions for data extraction.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">RegEx</span>
+                    <span class="tag">Glob</span>
+                    <span class="tag">Automation</span>
                 </div>
-
-                <!-- Medium Card: FYP -->
-                <div class="bento-card">
-                    <div>
-                        <div class="metric">4-DOF</div>
-                        <h3>Surgical Assistive Robot</h3>
-                        <p>
-                            Led the development of a robotic system for surgical-tool retrieval for my B.Sc. thesis. Integrated 
-                            voice recognition, computer vision, and embedded motor control. <strong>Graded A-.</strong>
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Robotics</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">Arduino</span>
-                    </div>
+                <div class="project-links">
+                    <a href="https://github.com/IramLiaquat/technical-writing" target="_blank">View Repository →</a>
                 </div>
+            </div>
+        </section>
 
-                <!-- Large Card: Technical Writing -->
-                <div class="bento-card large">
-                    <div>
-                        <h3>Technical Writing & Python Tooling</h3>
-                        <p>
-                            I document my professional learning and build internal tools to streamline QA workflows. 
-                            Authored technical articles and developed Python utilities for efficient log file parsing (RegEx) 
-                            and automated file selection (Glob).
-                        </p>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">RegEx</span>
-                            <span class="tag">Technical Writing</span>
-                        </div>
-                        <a href="https://github.com/IramLiaquat/technical-writing" target="_blank" class="card-link">View Repository →</a>
-                    </div>
+        <!-- EXPERIENCE -->
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div>
+                    <span class="exp-role">Embedded QA Engineer</span> | 
+                    <a href="https://gomotive.com/" target="_blank" class="exp-company">Motive Technologies Inc.</a>
                 </div>
+                <span class="exp-date">Mar 2024 – Present</span>
+            </div>
 
+            <div class="experience-item">
+                <div>
+                    <span class="exp-role">Embedded QA Engineer</span> | 
+                    <a href="https://mrstech.com.pk/" target="_blank" class="exp-company">MRS Technologies</a>
+                </div>
+                <span class="exp-date">Aug 2023 – Feb 2024</span>
+            </div>
+
+            <div class="experience-item">
+                <div>
+                    <span class="exp-role">QA Engineer / Team Lead</span> | 
+                    <a href="https://smartends.com/" target="_blank" class="exp-company">SmartEnds Ltd.</a>
+                </div>
+                <span class="exp-date">Sep 2021 – Jul 2023</span>
+            </div>
+
+            <div class="experience-item">
+                <div>
+                    <span class="exp-role">Customer Service Executive</span> | 
+                    <a href="https://www.huawei.com/" target="_blank" class="exp-company">Huawei Technologies</a>
+                </div>
+                <span class="exp-date">Feb 2020 – Feb 2021</span>
             </div>
         </section>
 
         <!-- EDUCATION -->
-        <section>
+        <section class="section">
             <h2 class="section-title">Education</h2>
-            <div class="education">
-                <h3>B.Sc. Mechatronics and Control Engineering</h3>
-                <div class="uni">University of Engineering and Technology (UET), Lahore</div>
-                <p>Graduated 2019 | CGPA: 3.11 / 4.00</p>
-                <p style="margin-top: 8px;">Core Focus: Control Systems, Embedded Systems, Robotics, Signals & Systems, Power Electronics.</p>
+            <div class="edu-degree">B.Sc. Mechatronics and Control Engineering</div>
+            <div class="edu-uni">University of Engineering and Technology (UET), Lahore</div>
+            <div class="edu-details">2015 – 2019</div>
+            <div class="edu-details" style="margin-top: 8px;">
+                <strong>Relevant Coursework:</strong> Control Systems, Embedded Systems, Robotics, Signals & Systems, Power Electronics.
             </div>
         </section>
 
-    </div>
+        <!-- FOOTER -->
+        <footer>
+            <div class="social-links">
+                <a href="mailto:iram.liaquat.7528@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/iram-liaquat-92689b167/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/IramLiaquat" target="_blank">GitHub</a>
+                <a href="https://medium.com/@iram.liaquat" target="_blank">Medium</a>
+            </div>
+            <p>© 2024 Iram Liaquat. Built with GitHub Pages.</p>
+        </footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/iram-liaquat-92689b167/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/IramLiaquat" target="_blank">GitHub</a>
-            <a href="https://medium.com/@iram.liaquat" target="_blank">Medium</a>
-            <a href="mailto:iram.liaquat.7528@gmail.com">Email</a>
-        </div>
-        <p>© 2024 Iram Liaquat. Built with GitHub Pages.</p>
-        <p style="font-size: 0.8rem; margin-top: 8px; opacity: 0.6;">Disclaimer: Personal portfolio. Views and code are my own. Proprietary company information is excluded.</p>
-    </footer>
+    </div>
 
 </body>
 </html>
