@@ -3,468 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iram Liaquat | Mechatronics & Control Engineer</title>
-    <!-- Devicon for professional tech stack icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-primary: #1a1a1a;
-            --text-secondary: #4a4a4a;
-            --accent: #2563eb; /* Professional academic blue */
-            --accent-light: #eff6ff;
-            --border: #e5e7eb;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+    <title>Iram Liaquat | Embedded Systems Engineer</title>
+    <meta
+        name="description"
+        content="Iram Liaquat — Embedded Systems Engineer specializing in automotive telematics, embedded systems, IoT, robotics, and systems validation."
+    >
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-        /* --- Hero Section --- */
-        .hero {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--border);
-            flex-shrink: 0;
-        }
-
-        .hero-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
-
-        .hero .subtitle {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .hero .bio {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            line-height: 1.7;
-        }
-
-        /* --- Skills Icons --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent-light);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-
-        .skill-item i {
-            font-size: 1.2rem;
-            color: var(--accent);
-        }
-
-        /* --- Sections General --- */
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border);
-            color: var(--text-primary);
-        }
-
-        /* --- Research Interests --- */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-        }
-
-        .interest-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .interest-item::before {
-            content: '▹';
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        /* --- Projects --- */
-        .project-card {
-            background: #fafafa;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 16px;
-        }
-
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .project-gif {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-bottom: 16px;
-        }
-
-        .project-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        .tag {
-            background: var(--bg-color);
-            border: 1px solid var(--border);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            font-family: monospace;
-        }
-
-        .project-links a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-right: 16px;
-        }
-
-        .project-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Experience --- */
-        .experience-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .exp-role {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .exp-company {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .exp-company:hover {
-            text-decoration: underline;
-        }
-
-        .exp-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-family: monospace;
-        }
-
-        /* --- Education --- */
-        .edu-degree {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-        }
-
-        .edu-uni {
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .edu-details {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* --- Footer --- */
-        footer {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 16px;
-        }
-
-        .social-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 600px) {
-            .hero {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .skills-container {
-                justify-content: center;
-            }
-            .project-header {
-                flex-direction: column;
-            }
-            .experience-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <!-- HERO SECTION -->
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="nav container">
+
+            <a href="#" class="brand">
+                IRAM<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#projects">Projects</a>
+                <a href="#research">Research</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#" class="cv-button">
+                CV <span>↗</span>
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
         <section class="hero">
-            <!-- 📸 YOUR IMAGE GOES HERE: Name your file 'profile.jpg' and upload it to the root of this repo -->
-            <img src="profile.jpg" alt="Iram Liaquat" class="profile-img">
-            
-            <div class="hero-content">
-                <h1>Iram Liaquat</h1>
-                <p class="subtitle">Mechatronics & Control Engineer | Embedded QA @ Motive Technologies Inc.</p>
-                <p class="bio">
-                    I am a Mechatronics and Control Engineer specializing in embedded systems, robotics, and control theory. Currently, I work as an Embedded QA Engineer at Motive Technologies Inc., designing validation frameworks for automotive telematics. My focus is on bridging the gap between theoretical control systems and real-world hardware reliability.
-                </p>
 
-                <!-- SOFTWARE SKILLS -->
-                <div class="skills-container">
-                    <div class="skill-item"><i class="devicon-python-plain"></i> Python</div>
-                    <div class="skill-item"><i class="devicon-cplusplus-plain"></i> C++</div>
-                    <div class="skill-item"><i class="devicon-arduino-plain"></i> Arduino</div>
-                    <div class="skill-item"><i class="devicon-opencv-plain"></i> OpenCV</div>
-                    <div class="skill-item"><i class="devicon-linux-plain"></i> Linux</div>
-                    <div class="skill-item"><i class="devicon-git-plain"></i> Git</div>
-                    <div class="skill-item"><i class="devicon-amazonwebservices-original"></i> AWS</div>
-                    <div class="skill-item"><i class="devicon-bash-plain"></i> Shell</div>
-                    <div class="skill-item">⚙️ RoboAnalyzer</div>
-                    <div class="skill-item">🚗 CAN Tools</div>
-                </div>
-            </div>
-        </section>
+            <!-- Background technical grid -->
+            <div class="hero-grid"></div>
 
-        <!-- RESEARCH INTERESTS -->
-        <section class="section">
-            <h2 class="section-title">Research & Technical Interests</h2>
-            <div class="interests-grid">
-                <div class="interest-item">Embedded Systems & Real-Time Control</div>
-                <div class="interest-item">Automotive Telematics & Connected Vehicles (CAV)</div>
-                <div class="interest-item">Robotics, Mechatronics & Sensor Fusion</div>
-                <div class="interest-item">System Validation & Test Automation</div>
-            </div>
-        </section>
+            <!-- Decorative technical line -->
+            <div class="hero-line hero-line-one"></div>
+            <div class="hero-line hero-line-two"></div>
 
-        <!-- PROJECTS -->
-        <section class="section">
-            <h2 class="section-title">Projects</h2>
-            
-            <!-- Project 1: FYP -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <div class="project-title">Operation Theatre Assistive Robot (Final Year Thesis)</div>
+            <div class="hero-content container">
+
+                <!-- LEFT -->
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        EMBEDDED SYSTEMS ENGINEER
                     </div>
-                </div>
-                <!-- 🎥 YOUR GIF GOES HERE: Name your file 'fyp-demo.gif' and upload it to the root of this repo -->
-                <img src="fyp-demo.gif" alt="FYP Robot Demo" class="project-gif">
-                
-                <p class="project-desc">
-                    A 4-Degree-of-Freedom (4-DOF) robotic manipulator designed for surgical tool retrieval. The system integrates voice recognition for command parsing and computer vision (color and glove detection) for precise spatial positioning. I led the hardware-software integration, kinematic modeling, and closed-loop system validation.
-                </p>
-                <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">OpenCV</span>
-                    <span class="tag">C++</span>
-                    <span class="tag">Arduino</span>
-                    <span class="tag">4-DOF Kinematics</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/IramLiaquat/operation-theatre-assistive-robot" target="_blank">View Code →</a>
-                </div>
-            </div>
 
-            <!-- Project 2: Python Automation -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <div class="project-title">Python Automation & QA Tooling</div>
+                    <h1>
+                        IRAM
+                        <span>LIAQUAT</span>
+                    </h1>
+
+                    <p class="specialization">
+                        AUTOMOTIVE TELEMATICS
+                        <span>·</span>
+                        EMBEDDED SYSTEMS
+                        <span>·</span>
+                        IoT
+                        <span>·</span>
+                        ROBOTICS
+                    </p>
+
+                    <p class="hero-description">
+                        I build and validate connected embedded systems
+                        across hardware, firmware, and field data.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#work" class="button button-primary">
+                            VIEW MY WORK
+                            <span>↘</span>
+                        </a>
+
+                        <a
+                            href="https://github.com/Iram-Liaquat"
+                            class="button button-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GITHUB
+                            <span>↗</span>
+                        </a>
+
                     </div>
+
                 </div>
-                <p class="project-desc">
-                    A collection of open-source Python utilities and technical documentation focusing on automated log parsing and file system navigation for embedded QA workflows. Focuses on building reproducible, clean-code solutions for data extraction.
-                </p>
-                <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">RegEx</span>
-                    <span class="tag">Glob</span>
-                    <span class="tag">Automation</span>
+
+
+                <!-- RIGHT -->
+                <div class="hero-visual">
+
+                    <!-- Technical system layer -->
+                    <div class="system-overlay">
+
+                        <div class="system-label label-top">
+                            <span>01</span>
+                            CONNECTED SYSTEM
+                        </div>
+
+                        <div class="system-flow">
+
+                            <div class="flow-node">
+                                <span class="node-number">01</span>
+                                <span class="node-name">VEHICLE</span>
+                            </div>
+
+                            <div class="flow-line"></div>
+
+                            <div class="flow-node">
+                                <span class="node-number">02</span>
+                                <span class="node-name">GATEWAY</span>
+                            </div>
+
+                            <div class="flow-line"></div>
+
+                            <div class="flow-node">
+                                <span class="node-number">03</span>
+                                <span class="node-name">FIRMWARE</span>
+                            </div>
+
+                            <div class="flow-line"></div>
+
+                            <div class="flow-node">
+                                <span class="node-number">04</span>
+                                <span class="node-name">FIELD DATA</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Portrait -->
+                    <div class="portrait-wrapper">
+
+                        <div class="portrait-number">
+                            IRAM LIAQUAT / 01
+                        </div>
+
+                        <img
+                            src="profile.jpg"
+                            alt="Iram Liaquat"
+                            class="portrait"
+                        >
+
+                        <div class="portrait-fade"></div>
+
+                    </div>
+
+
+                    <!-- Technical coordinates -->
+                    <div class="coordinates">
+                        <span>EMBEDDED</span>
+                        <span>TELEMATICS</span>
+                        <span>IoT</span>
+                    </div>
+
+                    <div class="visual-marker">
+                        <span></span>
+                    </div>
+
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/IramLiaquat/technical-writing" target="_blank">View Repository →</a>
-                </div>
+
             </div>
+
+
+            <!-- Bottom metadata -->
+            <div class="hero-bottom container">
+
+                <div class="scroll-indicator">
+                    <span class="scroll-line"></span>
+                    SCROLL TO EXPLORE
+                </div>
+
+                <div class="hero-index">
+                    01 / 06
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- EXPERIENCE -->
-        <section class="section">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="experience-item">
-                <div>
-                    <span class="exp-role">Embedded QA Engineer</span> | 
-                    <a href="https://gomotive.com/" target="_blank" class="exp-company">Motive Technologies Inc.</a>
-                </div>
-                <span class="exp-date">Mar 2024 – Present</span>
-            </div>
 
-            <div class="experience-item">
-                <div>
-                    <span class="exp-role">Embedded QA Engineer</span> | 
-                    <a href="https://mrstech.com.pk/" target="_blank" class="exp-company">MRS Technologies</a>
-                </div>
-                <span class="exp-date">Aug 2023 – Feb 2024</span>
-            </div>
-
-            <div class="experience-item">
-                <div>
-                    <span class="exp-role">QA Engineer / Team Lead</span> | 
-                    <a href="https://smartends.com/" target="_blank" class="exp-company">SmartEnds Ltd.</a>
-                </div>
-                <span class="exp-date">Sep 2021 – Jul 2023</span>
-            </div>
-
-            <div class="experience-item">
-                <div>
-                    <span class="exp-role">Customer Service Executive</span> | 
-                    <a href="https://www.huawei.com/" target="_blank" class="exp-company">Huawei Technologies</a>
-                </div>
-                <span class="exp-date">Feb 2020 – Feb 2021</span>
-            </div>
+        <!-- Temporary placeholders -->
+        <section id="about" class="placeholder-section">
+            <span>02</span>
+            ABOUT
         </section>
 
-        <!-- EDUCATION -->
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-degree">B.Sc. Mechatronics and Control Engineering</div>
-            <div class="edu-uni">University of Engineering and Technology (UET), Lahore</div>
-            <div class="edu-details">2015 – 2019</div>
-            <div class="edu-details" style="margin-top: 8px;">
-                <strong>Relevant Coursework:</strong> Control Systems, Embedded Systems, Robotics, Signals & Systems, Power Electronics.
-            </div>
+        <section id="work" class="placeholder-section">
+            <span>03</span>
+            WORK
         </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="social-links">
-                <a href="mailto:iram.liaquat.7528@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/iram-liaquat-92689b167/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/IramLiaquat" target="_blank">GitHub</a>
-                <a href="https://medium.com/@iram.liaquat" target="_blank">Medium</a>
-            </div>
-            <p>© 2024 Iram Liaquat. Built with GitHub Pages.</p>
-        </footer>
+        <section id="projects" class="placeholder-section">
+            <span>04</span>
+            PROJECTS
+        </section>
 
-    </div>
+        <section id="research" class="placeholder-section">
+            <span>05</span>
+            RESEARCH
+        </section>
+
+        <section id="contact" class="placeholder-section">
+            <span>06</span>
+            CONTACT
+        </section>
+
+    </main>
 
 </body>
 </html>
