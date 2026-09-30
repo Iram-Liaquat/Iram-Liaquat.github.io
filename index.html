@@ -1,72 +1,73 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Iram Liaquat | Embedded Systems Engineer</title>
+    <title>Iram Liaquat | Mechatronics &amp; Control Engineer</title>
+
     <meta
         name="description"
-        content="Iram Liaquat — Embedded Systems Engineer specializing in automotive telematics, embedded systems, IoT, robotics, and systems validation."
+        content="Iram Liaquat — Mechatronics &amp; Control Engineer working across automotive telematics, embedded systems, IoT, robotics, and systems validation."
     >
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
     <header class="site-header">
-        <nav class="nav container">
+        <div class="container nav">
 
-            <a href="#" class="brand">
+            <a href="#hero" class="logo">
                 IRAM<span>.</span>
             </a>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#projects">Projects</a>
-                <a href="#research">Research</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <nav class="nav-links">
+                <a href="#about">ABOUT</a>
+                <a href="#work">WORK</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#research">RESEARCH</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
 
-            <a href="#" class="cv-button">
+            <a href="#" class="nav-cv">
                 CV <span>↗</span>
             </a>
 
-        </nav>
+        </div>
     </header>
 
 
-    <!-- Hero -->
+    <!-- =========================
+         HERO
+    ========================== -->
     <main>
 
-        <section class="hero">
+        <section class="hero" id="hero">
 
-            <!-- Background technical grid -->
-            <div class="hero-grid"></div>
+            <div class="container hero-grid">
 
-            <!-- Decorative technical line -->
-            <div class="hero-line hero-line-one"></div>
-            <div class="hero-line hero-line-two"></div>
-
-            <div class="hero-content container">
-
-                <!-- LEFT -->
-                <div class="hero-copy">
+                <!-- HERO CONTENT -->
+                <div class="hero-content">
 
                     <div class="eyebrow">
                         <span class="status-dot"></span>
-                        EMBEDDED SYSTEMS ENGINEER
+                        MECHATRONICS &amp; CONTROL ENGINEER
                     </div>
 
                     <h1>
@@ -75,35 +76,27 @@
                     </h1>
 
                     <p class="specialization">
-                        AUTOMOTIVE TELEMATICS
-                        <span>·</span>
-                        EMBEDDED SYSTEMS
-                        <span>·</span>
-                        IoT
-                        <span>·</span>
-                        ROBOTICS
+                        AUTOMOTIVE TELEMATICS · EMBEDDED SYSTEMS · IoT · ROBOTICS
                     </p>
 
                     <p class="hero-description">
-                        I build and validate connected embedded systems
-                        across hardware, firmware, and field data.
+                        I work at the intersection of embedded systems,
+                        connected vehicles, and systems validation.
                     </p>
 
                     <div class="hero-actions">
 
-                        <a href="#work" class="button button-primary">
-                            VIEW MY WORK
-                            <span>↘</span>
+                        <a href="#projects" class="btn btn-primary">
+                            VIEW MY WORK <span>↘</span>
                         </a>
 
                         <a
                             href="https://github.com/Iram-Liaquat"
-                            class="button button-secondary"
+                            class="btn btn-secondary"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            GITHUB
-                            <span>↗</span>
+                            GITHUB <span>↗</span>
                         </a>
 
                     </div>
@@ -111,56 +104,10 @@
                 </div>
 
 
-                <!-- RIGHT -->
+                <!-- HERO VISUAL -->
                 <div class="hero-visual">
 
-                    <!-- Technical system layer -->
-                    <div class="system-overlay">
-
-                        <div class="system-label label-top">
-                            <span>01</span>
-                            CONNECTED SYSTEM
-                        </div>
-
-                        <div class="system-flow">
-
-                            <div class="flow-node">
-                                <span class="node-number">01</span>
-                                <span class="node-name">VEHICLE</span>
-                            </div>
-
-                            <div class="flow-line"></div>
-
-                            <div class="flow-node">
-                                <span class="node-number">02</span>
-                                <span class="node-name">GATEWAY</span>
-                            </div>
-
-                            <div class="flow-line"></div>
-
-                            <div class="flow-node">
-                                <span class="node-number">03</span>
-                                <span class="node-name">FIRMWARE</span>
-                            </div>
-
-                            <div class="flow-line"></div>
-
-                            <div class="flow-node">
-                                <span class="node-number">04</span>
-                                <span class="node-name">FIELD DATA</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Portrait -->
                     <div class="portrait-wrapper">
-
-                        <div class="portrait-number">
-                            IRAM LIAQUAT / 01
-                        </div>
 
                         <img
                             src="profile.jpg"
@@ -173,15 +120,31 @@
                     </div>
 
 
-                    <!-- Technical coordinates -->
-                    <div class="coordinates">
-                        <span>EMBEDDED</span>
-                        <span>TELEMATICS</span>
-                        <span>IoT</span>
-                    </div>
+                    <!-- CONNECTED SYSTEM -->
+                    <div class="system-flow">
 
-                    <div class="visual-marker">
-                        <span></span>
+                        <div class="flow-label">
+                            CONNECTED SYSTEM
+                        </div>
+
+                        <div class="flow-line">
+
+                            <span>VEHICLE</span>
+
+                            <span class="flow-arrow">→</span>
+
+                            <span>GATEWAY</span>
+
+                            <span class="flow-arrow">→</span>
+
+                            <span>FIRMWARE</span>
+
+                            <span class="flow-arrow">→</span>
+
+                            <span>FIELD DATA</span>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -189,13 +152,10 @@
             </div>
 
 
-            <!-- Bottom metadata -->
-            <div class="hero-bottom container">
+            <!-- HERO FOOTER -->
+            <div class="container hero-bottom">
 
-                <div class="scroll-indicator">
-                    <span class="scroll-line"></span>
-                    SCROLL TO EXPLORE
-                </div>
+                <div class="hero-line"></div>
 
                 <div class="hero-index">
                     01 / 06
@@ -206,33 +166,104 @@
         </section>
 
 
-        <!-- Temporary placeholders -->
-        <section id="about" class="placeholder-section">
-            <span>02</span>
-            ABOUT
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="placeholder-section" id="about">
+
+            <div class="container">
+
+                <span class="section-label">02 / ABOUT</span>
+
+                <h2>About</h2>
+
+            </div>
+
         </section>
 
-        <section id="work" class="placeholder-section">
-            <span>03</span>
-            WORK
+
+        <!-- =========================
+             WORK
+        ========================== -->
+        <section class="placeholder-section" id="work">
+
+            <div class="container">
+
+                <span class="section-label">03 / WORK</span>
+
+                <h2>Experience</h2>
+
+            </div>
+
         </section>
 
-        <section id="projects" class="placeholder-section">
-            <span>04</span>
-            PROJECTS
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+        <section class="placeholder-section" id="projects">
+
+            <div class="container">
+
+                <span class="section-label">04 / PROJECTS</span>
+
+                <h2>Selected Work</h2>
+
+            </div>
+
         </section>
 
-        <section id="research" class="placeholder-section">
-            <span>05</span>
-            RESEARCH
+
+        <!-- =========================
+             RESEARCH
+        ========================== -->
+        <section class="placeholder-section" id="research">
+
+            <div class="container">
+
+                <span class="section-label">05 / RESEARCH</span>
+
+                <h2>Research Project</h2>
+
+            </div>
+
         </section>
 
-        <section id="contact" class="placeholder-section">
-            <span>06</span>
-            CONTACT
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="placeholder-section" id="contact">
+
+            <div class="container">
+
+                <span class="section-label">06 / CONTACT</span>
+
+                <h2>Contact</h2>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Iram Liaquat
+            </p>
+
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
+```
